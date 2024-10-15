@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Registro</title>
+    <style>
+        label{border: 2px solid blue;
+            background-color: lightblue;
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 5px; width: 10px;
+        }
+        input,select,textarea{padding: 5px;}
+
+       
+    </style>
+</head>
+<body>
+    <h1>Formulario de Registro</h1>
+    <form action="procesa-registro.php" method="get">
+        <fieldset>
+            <legend>Datos personales</legend>
+        <p>
+            <!-- //IMPORTANTE enlazar el FOR con  el ID para que cuando cliquen en la etiequeta se marca y se desmarca -->
+            <label for="nom">Nombre:</label> 
+            <input type="text" name="nombre" required placeholder="Escriba su nombre aquí"
+             id="nom" maxlength="5">
+        </p>
+        <p>
+             <label for="ape">Apellidos:</label>
+             <input type="text" name="Apellidos" placeholder="Escriba sus apellidos aquí"
+             id="ape" maxlength="20">
+        </p>
+        <p>
+            <label for="contrase">Contraseña:</label>
+            <input type="password" name="Contraseña" required placeholder="Escriba su contraseña aquí"
+            id="contrase" maxlength="8" maxlength="6" style="width: 100px;">
+        </p>
+        <p>
+           <label for="hombre"> Hombre:</label>
+           <input type="radio" name="Genero" value="H" id="hombre">
+           <label for="mujer"> Mujer:</label>
+           <input type="radio" name="Genero" value="M" id="mujer" checked>
+        </p>
+        <p>
+            <label for="fuma">Fumador/a:</label>   
+            <input type="checkbox" value="fuma" checked id="fuma">
+        </p>
+        <p>
+            <label for="ue">Union Europea</label>
+            <input type="radio" value="ue" name="nacionalidad" id="ue" checked>
+            <label for="noue">Fuera de la Union Europea</label>
+            <input type="radio" value="ue" name="nacionalidad" id="noue">
+            <label for="nosabe">NS/NC</label>
+            <input type="radio" value="ue" name="nacionalidad" id="nosabe">
+            
+        </p>
+       
+
+    </fieldset>
+    <fieldset>
+        <legend>Datos de la reserva</legend>
+        <p>
+           <label for="tipo"> Tipo de Habitacion</label>
+           <select name="tipohab" id="tipo" required>
+               <option value="" selected>Seleccione</option>
+               <option value="1">Individual</option>
+               <option value="2">Doble</option>
+               <option value="3">Triple</option>
+           </select>
+        </p>
+        <p>
+            <label for="obs">Observaciones:</label>
+        </p>
+        <p>
+             <textarea name="obs" placeholder="Indique sus peticiones" id="obs" cols="30" rows="3"></textarea>
+        </p>
+        <p>
+            <label for="dni">Adjunte fotocopia de DNI</label>
+            <input type="file" name="dni" id="dni">
+        </p>
+        <p>
+            <label for="fecha-llegada">Fecha de llegada</label>
+            <input type="date" name="fecha-llegada" id="fecha-llegada">
+        </p>
+        <p>
+            <label for="hora-llegada">Hora</label>
+            <input type="time" name="hora-llegada" id="hora-llegada">
+         </p>
+        <p>
+            <label for="num-personas">Número de personas</label>
+            <input type="number" name="num-personas" id="num-personas" min="1" max="5">
+        </p> 
+   
+
+        
+    
+
+
+    </fieldset>
+    <input style="10px" type="submit"  value="Hacer Registro">
+    <input style="10px" type="reset"  value="Reiniciar Formulario">
+
+
+    </form>
+</body>
+</html>
